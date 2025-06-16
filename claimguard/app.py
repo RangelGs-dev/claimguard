@@ -10,12 +10,13 @@ account_sid = settings.ACCOUNT_SID
 auth_token = settings.AUTH_TOKEN
 client = Client(account_sid, auth_token)
 
-message = client.messages.create(
-  from_='whatsapp:+14155238886',
-  content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
-  content_variables='{"1":"12/1","2":"3pm"}',
-  to='whatsapp:+559391627229'
-)
+def envia_mensagem():
+  message = client.messages.create(
+    from_='whatsapp:+14155238886',
+    content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
+    content_variables='{"1":"12/1","2":"3pm"}',
+    to='whatsapp:+559391627229'
+  )
 
 
 @app.post('/webhook')

@@ -7,3 +7,4 @@ class Settings(BaseSettings):
 
     ACCOUNT_SID: str
     AUTH_TOKEN: str
+    DATABASE_URL: str
